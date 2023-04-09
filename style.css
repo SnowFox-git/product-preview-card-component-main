@@ -35,6 +35,9 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-size: 62.5%;
+}
 /*
   Typographic tweaks!
   4. Add accessible line-height
@@ -78,3 +81,46 @@ h6 {
 }
 
 /* CSS RESET END */
+
+/* generic stiling */
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1.4rem;
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-primary-200);
+
+  display: grid;
+  place-content: center;
+  margin: 1.5rem;
+}
+
+/* utilities */
+.flex-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* product */
+.product {
+  background-color: var(--clr-neutral-100);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  --content-padding: 2rem;
+  --content-spacing: 1.5rem;
+}
+
+.product__content {
+  padding: var(--content-padding);
+
+  display: grid;
+  gap: var(--content-spacing);
+}
+
+.product__category {
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
