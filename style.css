@@ -44,7 +44,7 @@ html {
   5. Improve text rendering
 */
 body {
-  line-height: 1.5;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 /*
@@ -80,6 +80,12 @@ h6 {
   overflow-wrap: break-word;
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
 /* CSS RESET END */
 
 /* generic stiling */
@@ -99,8 +105,18 @@ body {
 /* utilities */
 .flex-group {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
+  align-items: center;
+}
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* product */
@@ -109,8 +125,8 @@ body {
   border-radius: 1rem;
   overflow: hidden;
 
-  --content-padding: 2rem;
-  --content-spacing: 1.5rem;
+  --content-padding: 2.5rem;
+  --content-spacing: 2rem;
 }
 
 .product__content {
@@ -123,4 +139,17 @@ body {
 .product__category {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
+}
+
+.product__title {
+  font-size: 3rem;
+  font-family: var(--ff-accent);
+  color: var(--clr-neutral-900);
+}
+
+.product__price {
+  font-size: 3rem;
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-400);
 }
